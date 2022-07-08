@@ -1,5 +1,12 @@
 # spring5 + velocity2 不兼容的处理
 ## spring xml config:
+```
+<dependency>
+  <groupId>com.clickpaas.arch</groupId>
+  <artifactId>spring-context-velocity</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
 ```aidl
     <bean id="velocityConfig"
 		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
