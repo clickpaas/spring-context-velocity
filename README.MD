@@ -1,5 +1,5 @@
 # spring5 + velocity2 不兼容的处理
-## spring xml config:
+## 相关xml配置:
 ```
 <dependency>
   <groupId>com.clickpaas.arch</groupId>
@@ -34,4 +34,33 @@
 		<property name="toolboxConfigLocation" value="/WEB-INF/velocity-toolbox.xml" />
 	</bean>
 		
+```
+```
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/security
+          http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http>
+		<intercept-url pattern="/css/**" access="permitAll" />
+		<intercept-url pattern="/fonts/**" access="permitAll" />
+		<intercept-url pattern="/css/**" access="permitAll" />
+		<intercept-url pattern="/js/**" access="permitAll" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<http-basic />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="${fixedUsername}" password="${fixedPassword}" authorities="ROLE_USER" />
+			</user-service>
+			<password-encoder ref="passwordEncoder"></password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder" factory-method="getInstance" />
+
+</beans:beans>
 ```
