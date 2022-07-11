@@ -1,5 +1,5 @@
 # spring5 + velocity2 不兼容的处理
-## 相关xml配置:
+## xml refer:
 ```
 <dependency>
   <groupId>com.clickpaas.arch</groupId>
@@ -64,3 +64,7 @@
 
 </beans:beans>
 ```
+## velocity change
+$velocityCount失效 替换为 $foreach.count
+
+
