@@ -9,9 +9,9 @@
 ```
 
 ## example
-https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin
-https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/resources/spring-web.xml
-https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/webapp/WEB-INF/web.xml
+- https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin
+- https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/resources/spring-web.xml
+- https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/webapp/WEB-INF/web.xml
 
 ## 404 with suffix reason
 ```
