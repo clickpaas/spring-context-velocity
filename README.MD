@@ -1,4 +1,4 @@
-# spring5 + velocity2 不兼容的处理
+# spring5 + velocity2 compatible
 ## maven 
 ```
 <dependency>
