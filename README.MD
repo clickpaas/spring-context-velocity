@@ -61,4 +61,15 @@ remove dependency:
 ## velocity change
 $velocityCount replace with $foreach.count
 
-
+## If your project failed to resolve the dependency, try to add the following repository:
+```
+    <repositories>
+        <repository>
+            <id>sonatype-nexus</id>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+```
