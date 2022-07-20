@@ -1,6 +1,14 @@
 # spring5 + velocity2 compatible
 ## maven 
-add dependency:
+add dependency for clickpaas users:
+```
+<dependency>
+  <groupId>com.clickpaas.arch</groupId>
+  <artifactId>spring-context-velocity</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+add dependency for community users:
 ```
 <dependency>
   <groupId>com.clickpaas.arch</groupId>
