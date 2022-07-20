@@ -1,10 +1,29 @@
 # spring5 + velocity2 compatible
 ## maven 
+add dependency:
 ```
 <dependency>
   <groupId>com.clickpaas.arch</groupId>
   <artifactId>spring-context-velocity</artifactId>
   <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+remove dependency:
+```
+<dependency>
+	<groupId>org.apache.velocity</groupId>
+	<artifactId>velocity</artifactId>
+	<version>1.x</version>
+</dependency>
+<dependency>
+	<groupId>org.apache.velocity</groupId>
+	<artifactId>velocity-tools</artifactId>
+	<version>2.x</version>
+</dependency>
+<dependency>
+    <groupId>com.alibaba.spring</groupId>
+    <artifactId>spring-webmvc-velocity</artifactId>
+    <version>1.4.3.18.RELEASE</version>
 </dependency>
 ```
 
