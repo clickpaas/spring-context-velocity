@@ -6,7 +6,10 @@
 
     <groupId>com.clickpaas.arch</groupId>
     <artifactId>spring-context-velocity</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
+    <name>spring-context-velocity</name>
+    <description>sprint5+velocity2</description>
+    <url>https://github.com/clickpaas/spring-context-velocity</url>
 
     <properties>
         <spring.version>5.3.9</spring.version>
@@ -81,12 +84,92 @@
                     <escapeString>\</escapeString>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${java.version}</source>
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
+                    <failOnError>false</failOnError>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <distributionManagement>
+    <!--<distributionManagement>
         <snapshotRepository>
             <id>snapshots</id>
             <url>http://maven.clickpaas.tech/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
+    </distributionManagement>-->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>maven-public</id> <!-- 此处id与setting.xml中的服务id保持一致 -->
+            <name>oss Snapshots Repository</name>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>maven-public</id> <!-- 此处id与setting.xml中的服务id保持一致 -->
+            <name>oss Staging Repository</name>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
+    <developers>
+        <developer>
+            <name>tingfeng</name>
+            <email>tingfeng.liu@clickpaas.com</email>
+            <organization>clickpaas</organization>
+            <organizationUrl>https://www.clickpaas.com</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/clickpaas/spring-context-velocity</url>
+        <connection>https://github.com/clickpaas/spring-context-velocity</connection>
+    </scm>
 </project>
