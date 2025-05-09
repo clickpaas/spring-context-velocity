@@ -6,7 +6,7 @@
 
     <groupId>com.clickpaas.arch</groupId>
     <artifactId>spring-context-velocity</artifactId>
-    <version>6.2.0-SNAPSHOT</version>
+    <version>6.2.0-RELEASE</version>
     <name>spring-context-velocity</name>
     <description>sprint5+velocity2</description>
     <url>https://github.com/clickpaas/spring-context-velocity</url>
