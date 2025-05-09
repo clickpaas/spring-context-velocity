@@ -1,6 +1,14 @@
-# spring5 + velocity2 compatible
+# spring5/spring6 + velocity2 compatible(兼容spring5/spring6 velocity2)
 ## maven 
-add dependency:
+add dependency for spring6:(添加spring6依赖)
+```
+<dependency>
+    <groupId>com.clickpaas.arch</groupId>
+    <artifactId>spring-context-velocity</artifactId>
+    <version>6.2.0-SNAPSHOT</version>
+</dependency>
+```
+add dependency for spring5:(添加spring5依赖)
 ```
 <dependency>
   <groupId>com.clickpaas.arch</groupId>
@@ -8,7 +16,7 @@ add dependency:
   <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
-remove dependency:
+remove dependency:(删除依赖)
 ```
 <dependency>
 	<groupId>org.apache.velocity</groupId>
@@ -27,18 +35,18 @@ remove dependency:
 </dependency>
 ```
 
-## example
+## example project (示例工程)
 - https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin
 - https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/resources/spring-web.xml
 - https://github.com/clickpaas/light-task-scheduler/blob/1.6.9.1/lts-admin/src/main/webapp/WEB-INF/web.xml
 
-## 404 with suffix reason
+## 404 with suffix reason (404 前缀导致的问题处理)
 ```
     <mvc:annotation-driven>
         <mvc:path-matching suffix-pattern="true" />
     </mvc:annotation-driven>
 ```
-## Encoder error
+## Encoder error (编码问题处理)
 ```
 	<authentication-manager>
 		<authentication-provider>
@@ -50,7 +58,7 @@ remove dependency:
 	</authentication-manager>
 	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.NoOpPasswordEncoder" factory-method="getInstance" />
 ```
-## velocity change
+## velocity template change (velocity模板页面的改动)
 $velocityCount replace with $foreach.count
 
 

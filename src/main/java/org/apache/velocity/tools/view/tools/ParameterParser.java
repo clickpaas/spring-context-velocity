@@ -5,7 +5,7 @@
 
 package org.apache.velocity.tools.view.tools;
 
-import javax.servlet.ServletRequest;
+import jakarta.servlet.ServletRequest;
 import org.apache.velocity.tools.view.ParameterTool;
 import org.apache.velocity.tools.view.ViewContext;
 

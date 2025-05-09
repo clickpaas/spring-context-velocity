@@ -17,7 +17,7 @@
 package org.springframework.web.servlet.view.velocity;
 
 import java.io.IOException;
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.VelocityException;

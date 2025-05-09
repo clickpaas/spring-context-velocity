@@ -16,12 +16,8 @@
 
 package org.springframework.web.servlet.view.velocity;
 
-import java.util.Locale;
-import java.util.Map;
-import java.util.TimeZone;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -30,15 +26,17 @@ import org.apache.velocity.exception.MethodInvocationException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.apache.velocity.tools.generic.DateTool;
 import org.apache.velocity.tools.generic.NumberTool;
-
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContextException;
-import org.springframework.core.NestedIOException;
 import org.springframework.web.servlet.support.RequestContextUtils;
 import org.springframework.web.servlet.view.AbstractTemplateView;
 import org.springframework.web.util.NestedServletException;
+
+import java.util.Locale;
+import java.util.Map;
+import java.util.TimeZone;
 
 /**
  * View using the Velocity template engine.
@@ -270,7 +268,7 @@ public class VelocityView extends AbstractTemplateView {
 			return false;
 		}
 		catch (Exception ex) {
-			throw new NestedIOException(
+			throw new IllegalStateException(
 					"Could not load Velocity template for URL [" + getUrl() + "]", ex);
 		}
 	}
